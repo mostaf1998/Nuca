@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Nu-ca Project1">
+    <groups>
+        <run>
+
+        </run>
+    </groups>
+<test name="greeting test" >
+    <classes>
+        <class name="Nuca_Test.FullLifeCycleTestLessThan5">
+            <methods>
+               <include name="a"/>
+                <exclude name="b"/>
+
+            </methods>
+       </class>
+
+    </classes>
+</test>
+
+</suite>
