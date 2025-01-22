@@ -23,6 +23,12 @@ public class D01_CreateRequest {
 
     }
 
+    //موظف الهيئة
+    public  WebElement userName1() {
+        return  driver.findElement(By.name("username"));
+
+    }
+
     public WebElement password() {
         return driver.findElement(By.name("password"));
 
