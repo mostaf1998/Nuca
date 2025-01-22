@@ -28,6 +28,10 @@ public class D01_CreateRequest {
         return  driver.findElement(By.name("username"));
 
     }
+    public  WebElement userName2() {
+        return  driver.findElement(By.name("username"));
+
+    }
 
     public WebElement password() {
         return driver.findElement(By.name("password"));
