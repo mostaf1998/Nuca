@@ -29,7 +29,7 @@ public class D01_CreateRequest {
 
     }
 
-    public WebElement password1() {
+    public WebElement password() {
         return driver.findElement(By.name("password"));
 
     }
