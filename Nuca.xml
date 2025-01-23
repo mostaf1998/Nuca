@@ -1,20 +1,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="Nu-ca Project1">
-    <groups>
-        <run>
-
-        </run>
-    </groups>
+<suite name="Nuca_Project1">
 <test name="greeting test" >
+
     <classes>
-        <class name="Nuca_Test.FullLifeCycleTestLessThan5">
+        <class name="Nuca_Test.CreateRequest">
             <methods>
-               <include name="a"/>
-                <exclude name="b"/>
-
+                <include name="createRequest"/>
+                <include name="opportunityChance"/>
             </methods>
-       </class>
-
+        </class>
     </classes>
 </test>
 

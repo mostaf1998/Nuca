@@ -1,0 +1,101 @@
+package Nuca_Test;
+
+import Nuca_Page.Page_Request;
+import org.openqa.selenium.JavascriptExecutor;
+import org.testng.annotations.Test;
+
+import java.awt.*;
+
+public class CreateRequest extends Testback {
+
+    Page_Request page;
+
+    @Test(priority = 1)
+    public void createRequest() throws AWTException, InterruptedException {
+        page = new Page_Request(driver);
+        page.userName().sendKeys("موظف الهيئة 1");
+        page.password().sendKeys("123456");
+        page.login().click();
+        page.opportunity().click();
+        page.createOpportunity().click();
+        page.landNumber().sendKeys("9876");
+        page.location().sendKeys("الشروق");
+        page.space().sendKeys("2000");
+        page.activityType().click();
+        page.activitySend().sendKeys("عمراني متكامل");
+        page.activityaAtion().click();
+        page.city().click();
+        page.sendCity().sendKeys("القاهرة الجديدة");
+        page.actionCity().click();
+        page.paymentCurrency().click();
+        page.sendPaymentCurrency().sendKeys("دولار");
+        page.actionPaymentCurrency().click();
+        JavascriptExecutor ns = (JavascriptExecutor) driver;
+        ns.executeScript("window.scroll(0,300)");
+        page.structuralRequirements().sendKeys("100 متر مباني");
+        page.implementationPeriod().sendKeys("علي 12 شهر");
+        JavascriptExecutor bs = (JavascriptExecutor) driver;
+        bs.executeScript("window.scroll(0,500)");
+        page.paymentMethod().sendKeys("يتم دفع المبلغ علي 4 اقساط");
+        page.shapefile().click();
+        Thread.sleep(2000);
+        page.uploadFile();
+        page.save().click();
+        Thread.sleep(3000);
+    }
+
+    @Test(priority = 2)
+    public void opportunityChance() throws InterruptedException {
+        page = new Page_Request(driver);
+        page.userName().sendKeys("مدير الفرص1");
+        page.password().sendKeys("123456");
+        page.login().click();
+        page.dropdown().click();
+        page.dropdownItem().click();
+        Thread.sleep(1000);
+        JavascriptExecutor os = (JavascriptExecutor) driver;
+        os.executeScript("window.scroll(0,300)");
+        page.AssignBtn().click();
+        Thread.sleep(1000);
+        JavascriptExecutor ks = (JavascriptExecutor) driver;
+        ks.executeScript("window.scroll(0,350)");
+        page.Assign().click();
+        Thread.sleep(300);
+        page.price().sendKeys("1000");
+        page.priceInstallment().sendKeys("2000");
+        page.ReservationFeePercent().sendKeys("20");
+        Thread.sleep(2000);
+        JavascriptExecutor ss = (JavascriptExecutor) driver;
+        ss.executeScript("window.scroll(0,600)");
+        JavascriptExecutor n =(JavascriptExecutor) driver;
+        n.executeScript("arguments[0].click();", page.button());
+        page.date().click();
+       // Thread.sleep(10);
+        //page.accepted().click();
+
+
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
